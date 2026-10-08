@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gym-bg: #0f172a;
+  --gym-surface: #1e293b;
+  --gym-border: #334155;
+  --gym-text: #f8fafc;
+  --gym-muted: #94a3b8;
+  --gym-accent: #f59e0b;
+  --gym-hover: #d97706;
+}
+
+html,
+body {
+  background-color: var(--gym-bg);
+  color: var(--gym-text);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*:focus-visible {
+  outline: 2px solid var(--gym-accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--gym-accent);
+  color: var(--gym-bg);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
